@@ -1,0 +1,52 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-page{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.hero-page img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.hero-page h1{
+    color: white;
+    text-align: center; 
+    font-size: 36px;
+    font-weight: 600; 
+}
+.hero-page h1:hover{
+    color: palegreen;
+}
+.hero-page p{
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.hero-page-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    text-align: center;
+}
