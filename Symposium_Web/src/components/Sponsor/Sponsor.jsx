@@ -1,8 +1,6 @@
 import React from 'react';
 import './Sponsor.css';
-import sponsor1 from '../../assets/sponsor1.png';
-import sponsor2 from '../../assets/sponsor2.png';
-import sponsor3 from '../../assets/sponsor3.png';
+
 
 const Sponsor = () => {
   return (
@@ -10,10 +8,24 @@ const Sponsor = () => {
       <div className='sponsor-page'>
         <div className='sponsor-page-overlay'>
           <h1>Our Sponsors</h1>
-          <div className='sponsor-images'>
-            <img alt='Sponsor1' className='floating' />
-            <img alt='Sponsor2' className='floating' />
-            <img alt='Sponsor3' className='floating' />
+          <div className='slider'>
+            <div className='slide-track'>
+              <div className='logo'><img  alt='Sponsor1' /></div>
+              <div className='logo'><img  alt='Sponsor2' /></div>
+              <div className='logo'><img  alt='Sponsor3' /></div>
+              <div className='logo'><img  alt='Sponsor4' /></div>
+              <div className='logo'><img  alt='Sponsor5' /></div>
+              <div className='logo'><img  alt='Sponsor6' /></div>
+              <div className='logo'><img  alt='Sponsor7' /></div>
+              {/* Repeat the logos to ensure smooth infinite scrolling */}
+              <div className='logo'><img  alt='Sponsor1' /></div>
+              <div className='logo'><img  alt='Sponsor2' /></div>
+              <div className='logo'><img  alt='Sponsor3' /></div>
+              <div className='logo'><img  alt='Sponsor4' /></div>
+              <div className='logo'><img  alt='Sponsor5' /></div>
+              <div className='logo'><img  alt='Sponsor6' /></div>
+              <div className='logo'><img  alt='Sponsor7' /></div>
+            </div>
           </div>
         </div>
       </div>
