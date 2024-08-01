@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #0f0f0f; 
+  color: #e0e0e0; 
+  overflow-x: hidden; 
+}
+
+.sponsor {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 0, 170, 0.8), rgba(68, 0, 255, 0.8));
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  animation: backgroundAnimation 10s infinite alternate;
+}
+
+.sponsor-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/about_logo.png') no-repeat center center;
+  background-size: cover;
+  filter: brightness(0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 2s ease-in-out, zoomIn 5s infinite alternate;
+  backdrop-filter: blur(8px);
+}
+
+.sponsor-page-overlay {
+  text-align: center;
+  color: #fff;
+  padding: 80px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+  position: relative;
+  animation: slideUp 1.5s ease-out, glowOverlay 3s infinite alternate;
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-page-overlay:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(255, 0, 255, 1);
+}
+
+.sponsor-page-overlay h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: textGlow 1.5s infinite alternate, textShadowPulse 1.5s infinite alternate;
+  font-weight: 700;
+  text-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+}
+
+.sponsor-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: fadeInText 2s ease-in-out;
+}
+
+.sponsor-images img {
+  width: 150px;
+  height: auto;
+  margin: 20px;
+  animation: floatLeftToRight 15s linear infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.sponsor-images img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  z-index: 2;
+}
+
+@keyframes floatLeftToRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes backgroundAnimation {
+  0% { background: linear-gradient(135deg, rgba(255, 0, 170, 0.8), rgba(68, 0, 255, 0.8)); }
+  50% { background: linear-gradient(135deg, rgba(255, 255, 0, 0.8), rgba(0, 51, 255, 0.8)); }
+  100% { background: linear-gradient(135deg, rgba(255, 0, 170, 0.8), rgba(68, 0, 255, 0.8)); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glowOverlay {
+  from { box-shadow: 0 0 30px rgba(255, 0, 255, 0.7); }
+  to { box-shadow: 0 0 50px rgba(255, 0, 255, 1); }
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 25px rgba(255, 0, 255, 0.6); }
+  to { text-shadow: 0 0 50px rgba(255, 0, 255, 1); }
+}
+
+@keyframes textShadowPulse {
+  0% { text-shadow: 0 0 25px rgba(255, 0, 255, 0.8); }
+  50% { text-shadow: 0 0 35px rgba(255, 0, 255, 1); }
+  100% { text-shadow: 0 0 25px rgba(255, 0, 255, 0.8); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

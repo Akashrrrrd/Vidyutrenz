@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #0f0f0f; /* Darker background for a more futuristic feel */
+    color: #e0e0e0; /* Light text color for contrast */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.about-page {
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('../../assets/sponsor_logo.png') no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundZoom 10s infinite alternate, backgroundShift 20s linear infinite;
+}
+
+.about-page-layout{
+    border: 2px solid gray;
+    width: 1000px;
+    height: 1100px;
+    margin: 20px;
+    padding: 20px;
+
+}
+
+.about-header {
+    text-align: center;
+    color: #fff;
+    margin-top: 120px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 0 60px rgba(0, 255, 255, 0.9);
+    animation: glowOverlay 3s infinite alternate, slideDown 1.5s ease-out;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px;
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-header:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 80px rgba(0, 255, 255, 1);
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    animation: textGlow 1.5s infinite alternate, textShadowPulse 1.5s infinite alternate;
+}
+
+.about-header p {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    animation: fadeInText 2s ease-in-out;
+}
+
+/* Section Styles */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-section {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    width: 85%;
+    max-width: 850px;
+    animation: fadeInZoom 2s ease-in-out, sectionPulse 3s infinite alternate;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 1);
+}
+
+.about-section h2 {
+    font-size: 2.75rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #00d4ff;
+    animation: textGlow 1.5s infinite alternate, textShadowPulse 1.5s infinite alternate;
+}
+
+.about-section p {
+    font-size: 1.3rem;
+    color: #ddd;
+    animation: fadeInSlide 2s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes glowOverlay {
+    from { box-shadow: 0 0 60px rgba(0, 255, 255, 0.8); }
+    to { box-shadow: 0 0 80px rgba(0, 255, 255, 1); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 30px rgba(0, 255, 255, 0.6); }
+    to { text-shadow: 0 0 60px rgba(0, 255, 255, 1); }
+}
+
+@keyframes textShadowPulse {
+    0% { text-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
+    50% { text-shadow: 0 0 45px rgba(0, 255, 255, 1); }
+    100% { text-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInZoom {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInSlide {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInSection {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes backgroundZoom {
+    0% { background-size: 100%; }
+    100% { background-size: 120%; }
+}
+
+@keyframes backgroundShift {
+    0% { background-position: 0 0; }
+    100% { background-position: 50% 50%; }
+}
+
+@keyframes sectionPulse {
+    0% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
+    50% { box-shadow: 0 0 45px rgba(0, 255, 255, 1); }
+    100% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
+}
