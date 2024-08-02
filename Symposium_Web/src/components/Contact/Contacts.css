@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f8f4e3;
+}
+
+.contact-page {
+    background-image: url('https://i.pinimg.com/originals/e8/f1/85/e8f185f1f410690ab9d14a2984b7e383.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-container{
+    border: 3px solid #7e4c6f;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow:0 0 20px 10px rgb(77, 23, 110);
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.049); /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+}
+
+.contact-container h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 30px;
+}
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contact-containers {
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.contact-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    animation: fadeInUp 0.5s ease-in-out;
+    flex: 1 1 200px; /* Ensure items take up equal space and wrap properly */
+}
+
+.contact-item img {
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    filter: sepia(1); /* Adding a sepia filter for a vintage look */
+    animation: rotateIn 1s ease-in-out;
+}
+
+.contact-item span {
+    font-size: 18px;
+    color: #555;
+    background: linear-gradient(to bottom, #e6a7ff 0%, #ffffff 100%);
+    padding: 5px 10px;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Ensure text is centered under icons */
+}
+
+@keyframes rotateIn {
+    from { transform: rotate(-60deg); opacity: 0; }
+    to { transform: rotate(0deg); opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.map-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.map-container h1{
+    color: #555;
+    margin-bottom: 60px;
+
+}
+
+.map-container iframe{
+    width: 80%;
+    height: 100px;
+    filter: invert(100%);
+}

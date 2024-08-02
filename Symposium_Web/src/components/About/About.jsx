@@ -1,7 +1,21 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./About.css";
 
 const About = () => {
+  const [particles, setParticles] = useState([]);
+
+  useEffect(() => {
+    const particleArray = [];
+    for (let i = 0; i < 100; i++) {
+      const style = {
+        left: `${Math.random() * 100}vw`,
+        animationDuration: `${Math.random() * 3 + 2}s`,
+        animationDelay: `${Math.random() * 5}s`,
+      };
+      particleArray.push(<div className="particle" style={style} key={i}></div>);
+    }
+    setParticles(particleArray);
+  }, []);
   return (
     <div className="about-page">
       <div className="about-page-layout">
